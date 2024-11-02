@@ -1,0 +1,28 @@
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+        Button:
+            text: "[b]CHECKIN[/b]"
+            markup: True
+            font_size: 32
+            on_press: root.manager.current = "checkin_camera"
+            
+        BoxLayout:
+            size_hint_y: 0.3
+            spacing: 10
+            Button:
+                text: "[b]ADD USER[/b]"
+                markup: True
+                font_size: 32
+                on_press: root.manager.current = "add_user_index"
+                size_hint_x: 0.5
+            Label:
+                text: ""
+                size_hint_x: 0.001
+            Button:
+                text: "[b]EXIT[/b]"
+                markup: True
+                font_size: 32
+                size_hint_x: 0.5

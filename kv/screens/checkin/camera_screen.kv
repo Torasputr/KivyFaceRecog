@@ -1,0 +1,47 @@
+<CheckinCameraScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        # Back Button
+        Button:
+            text: "Back"
+            on_press: root.manager.current = "home"
+            size_hint_y: 0.1
+
+        # Title Label
+        Label:
+            text: "Melakukan Scanning Wajah"
+            markup: True
+            font_size: 24 
+            size_hint_y: 0.1
+
+        # Main Content Layout
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10
+
+            # Image Display
+            Image:
+                id: camera_image
+                size_hint_y: 0.7  
+                allow_stretch: True  
+
+            # Instructions and Capture Button
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_y: 0.3  
+
+                Label:
+                    text: "Pastikan ada persegi berwarna hijau sebelum menekan tombol"
+                    size_hint_y: 0.7
+                    halign: "center" 
+                    valign: "middle"
+                    text_size: self.width, None  
+                    font_size: 18  
+
+                Button:
+                    text: "Masuk"
+                    size_hint_y: 0.3
+                    on_press: root.start_recog()  

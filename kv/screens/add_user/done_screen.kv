@@ -1,0 +1,8 @@
+<AddUserDoneScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: "Selamat Datang {}!".format(root.username)
+        Button:
+            text: "Home"
+            on_press: root.home()
